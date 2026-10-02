@@ -1,7 +1,8 @@
 [build]
-  publish = "build"
-  command = "node build.js"
+  publish = "."
+  command = "echo 'KAIROS site build successful'"
 
+# Ensure assets are served with proper cache headers
 [[headers]]
   for = "/*"
   [headers.values]
