@@ -127,6 +127,36 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScrollY = currentScrollY;
   });
 
+  // Mobile Navigation Drawer Toggle & Close
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function openMobileNav() {
+    mobileNavDrawer?.classList.add('open');
+    mobileNavOverlay?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    playUiTone(520, 'sine', 0.1);
+  }
+
+  function closeMobileNav() {
+    mobileNavDrawer?.classList.remove('open');
+    mobileNavOverlay?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  mobileMenuBtn?.addEventListener('click', openMobileNav);
+  mobileNavClose?.addEventListener('click', closeMobileNav);
+  mobileNavOverlay?.addEventListener('click', closeMobileNav);
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileNav();
+    });
+  });
+
   // ==========================================
   // 4. 3D WEBGL / PARTICLES & HOLOGRAPHIC GLOBE
   // ==========================================
