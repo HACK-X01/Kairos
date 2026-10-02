@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIROS | Events & Hospitality (~Mr. Jons) — Futuristic Event Production 2060</title>
+  <meta name="description" content="Kairos Events & Hospitality by ~Mr. Jons. Engineering unforgettable weddings, VIP celebrations, and corporate spectacles with futuristic 3D scenography and royal perfection.">
+  <meta name="keywords" content="Kairos events, luxury wedding planner, corporate gala production, futuristic event design, Mr Jons hospitality, high-tech event management">
+  <meta name="author" content="Kairos Events & Hospitality (~Mr. Jons)">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KAIROS | Events & Hospitality — Crafting Life's Perfect Moments">
+  <meta property="og:description" content="We engineer unforgettable moments. Weddings, parties, and corporate experiences designed for the future.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "Kairos Events & Hospitality",
+    "founder": "Mr. Jons",
+    "description": "Premier futuristic event engineering, royal weddings, corporate summits, and luxury parties.",
+    "priceRange": "$$$$",
+    "telephone": "+91 98765 43210",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ================= Preloader (2-3s Cinematic Reveal) ================= -->
+  <aside class="preloader" id="preloader" aria-label="Loading Experience">
+    <div class="preloader-ring-wrap">
+      <svg class="preloader-ring-svg" viewBox="0 0 170 170">
+        <defs>
+          <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FDF0D0" />
+            <stop offset="50%" stop-color="#D4AF37" />
+            <stop offset="100%" stop-color="#8C532B" />
+          </linearGradient>
+        </defs>
+        <circle class="preloader-circle-bg" cx="85" cy="85" r="75" />
+        <circle class="preloader-circle-val" id="preloaderCircle" cx="85" cy="85" r="75" />
+      </svg>
+      <img src="assets/images/kairos-circle-badge.png" alt="Kairos Official Logo Badge" class="preloader-emblem">
+    </div>
+    <div class="preloader-text-brand">KAIROS</div>
+    <div class="preloader-tagline">Crafting Life's Perfect Moments</div>
+    <div class="preloader-count" id="preloaderCount">INITIALIZING SYSTEM // 0%</div>
+  </aside>
+
+  <!-- ================= Global Experience Layer ================= -->
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"><span id="cursorText"></span></div>
+
+  <!-- Fullscreen Easter Egg Confetti Canvas -->
+  <canvas id="easterEggCanvas"></canvas>
+
+  <!-- ================= Floating Glass Navbar ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-wrap" aria-label="Kairos Home">
+        <div class="brand-emblem-box">
+          <img src="assets/images/kairos-circle-badge.png" alt="Kairos Events Logo">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-main-name">KAIROS</span>
+          <span class="brand-sub-badge">CRAFTING LIFE'S PERFECT MOMENTS</span>
+        </div>
+      </a>
+
+      <!-- Center Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-center-menu">
+          <li><a href="#about" class="nav-link-item">About</a></li>
+          <li><a href="#services" class="nav-link-item">Universe</a></li>
+          <li><a href="#timeline" class="nav-link-item">Timeline</a></li>
+          <li><a href="#designer" class="nav-link-item">Designer</a></li>
+          <li><a href="#portfolio" class="nav-link-item">Archive</a></li>
+          <li><a href="#packages" class="nav-link-item">Tiers</a></li>
+          <li><a href="#faq" class="nav-link-item">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-right-controls">
+        <!-- Audio Synth Toggle -->
+        <button type="button" class="audio-toggle-btn" id="audioToggleBtn" title="Toggle Futuristic Audio Atmosphere" aria-label="Toggle Audio">
+          <span id="audioIcon">🔇</span>
+        </button>
+
+        <a href="#designer" class="btn btn-solid-glow" id="navPlanBtn">Plan My Event</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= Hero Section - "The Portal" ================= -->
+  <section class="hero-portal-section" id="hero">
+    <!-- 3D WebGL / Particle Canvas -->
+    <canvas id="hero3dCanvas"></canvas>
+    
+    <!-- Perspective Grid Floor -->
+    <div class="hero-grid-floor"></div>
+
+    <div class="container hero-content">
+      <div class="hud-badge">
+        <span>KAIROS // CRAFTING LIFE'S PERFECT MOMENTS</span>
+      </div>
+
+      <h1 class="hero-main-title">
+        <span class="text-gradient">KAIROS</span> Engineers Unforgettable Moments.
+      </h1>
+
+      <p class="hero-sub-promise">
+        Weddings, parties and corporate experiences designed for the future. Blending emotional luxury with cinematic holographic scenography.
+      </p>
+
+      <div class="hero-actions-cluster">
+        <a href="#designer" class="btn btn-solid-glow" id="heroPlanBtn">
+          <span>⚡</span> Plan My Event
+        </a>
+        <button type="button" class="btn btn-ghost" id="showreelBtn">
+          <span>▶</span> Watch Showreel
+        </button>
+      </div>
+
+      <!-- Pulse Scroll Line -->
+      <div class="hero-scroll-indicator">
+        <span>INITIALIZE SCROLL</span>
+        <div class="pulse-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infinite Live Marquee Strip -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-content">
+      <span>WEDDINGS</span> <span class="dot">✦</span>
+      <span>VIP PARTIES</span> <span class="dot">✦</span>
+      <span>CONFERENCES</span> <span class="dot">✦</span>
+      <span>PRODUCT LAUNCHES</span> <span class="dot">✦</span>
+      <span>COLLEGE FESTS</span> <span class="dot">✦</span>
+      <span>ANNIVERSARY SOIRÉES</span> <span class="dot">✦</span>
+      <span>CELESTIAL GALAS</span> <span class="dot">✦</span>
+      <span>WEDDINGS</span> <span class="dot">✦</span>
+      <span>VIP PARTIES</span> <span class="dot">✦</span>
+      <span>CONFERENCES</span> <span class="dot">✦</span>
+      <span>PRODUCT LAUNCHES</span> <span class="dot">✦</span>
+      <span>COLLEGE FESTS</span> <span class="dot">✦</span>
+      <span>ANNIVERSARY SOIRÉES</span> <span class="dot">✦</span>
+      <span>CELESTIAL GALAS</span>
+    </div>
+  </div>
+
+  <!-- ================= About Section - "Who We Are" ================= -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-split-grid">
+        
+        <!-- Left: Word-by-Word Highlight Manifesto -->
+        <div class="about-text-column">
+          <span class="hud-badge" style="margin-bottom: 1.5rem;">01 // THE MANIFESTO</span>
+          <h2 class="heading" style="margin-bottom: 1.5rem;">Where Technology Meets <span class="text-gradient font-romance">Pure Emotion</span></h2>
+          
+          <p class="about-manifesto-large" id="manifestoPara">
+            "We blend creativity with cutting-edge production technology to turn your idea into an event people talk about for years. Every celebration is an architectural masterpiece designed to evoke wonder."
+          </p>
+
+          <p style="color: var(--text-dim); line-height: 1.8;">
+            Founded by <strong>~Mr. Jons</strong>, Kairos Events & Hospitality was born from a singular obsession: to replace outdated, cookie-cutter event management with awe-inspiring, future-engineered spectacles.
+          </p>
+
+          <!-- Animated Metrics Counter Grid -->
+          <div class="about-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-num" data-target="350">0</div>
+              <div class="metric-label">Events Engineered</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num" data-target="99" data-suffix=".4%">0</div>
+              <div class="metric-label">Client Approval Rating</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num" data-target="15" data-suffix="+">0</div>
+              <div class="metric-label">Cities & Destination Venues</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num" data-target="8" data-suffix="+">0</div>
+              <div class="metric-label">Years of Boundless Passion</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3D Tilt Glass Card with Founder Hologram -->
+        <div class="founder-tilt-wrapper">
+          <div class="founder-glass-card" id="founderCard">
+            <div class="founder-avatar-frame">
+              <img src="assets/images/kairos-circle-badge.png" alt="Mr. Jons Kairos Founder Emblem">
+            </div>
+            <div class="founder-info">
+              <div class="founder-name">~MR. JONS</div>
+              <div class="founder-role">Founder & Chief Experience Architect</div>
+              <p class="founder-quote">
+                "Events are fleeting, but the awe you feel when walking into a perfectly crafted world lasts forever. That is what Kairos creates."
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Services - "Choose Your Universe" ================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">02 // CHOOSE YOUR UNIVERSE</span>
+        <h2 class="heading">Dimensions of <span class="text-gradient">Celebration</span></h2>
+        <p class="description">
+          Explore our signature experiential realms. Click any universe card to project complete inclusions, technical specs, and sample execution blueprints.
+        </p>
+      </div>
+
+      <div class="universe-grid" id="universeGrid">
+        <!-- Rendered dynamically by app.js from siteConfig.services -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Holographic Modal Overlay -->
+  <div class="service-modal-overlay" id="serviceModal" aria-hidden="true" role="dialog">
+    <div class="service-modal-panel">
+      <button class="service-modal-close" id="serviceModalClose" aria-label="Close Service Overview">✕</button>
+      <div class="hud-badge" id="modalServiceBadge">CATEGORY SPECIFICATION</div>
+      <h3 class="font-heading" style="font-size: 1.85rem; margin: 0.8rem 0 1rem 0;" id="modalServiceTitle">Service Title</h3>
+      <p style="color: var(--text-dim); line-height: 1.7; margin-bottom: 1.5rem;" id="modalServiceDesc">Detailed description...</p>
+      
+      <h4 style="font-size: 1rem; color: var(--neon-cyan); margin-bottom: 0.75rem;">✦ Key Production Inclusions:</h4>
+      <ul id="modalServiceInclusions" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #fff;">
+      </ul>
+
+      <div style="background: rgba(34, 228, 255, 0.05); border: 1px dashed var(--neon-cyan); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.75rem;">
+        <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--neon-cyan); font-weight: 700;">Sample Timeline:</span>
+        <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.25rem;" id="modalServiceTimeline"></p>
+      </div>
+
+      <a href="#designer" class="btn btn-solid-glow" id="modalServiceAction">Configure This Event in Designer →</a>
+    </div>
+  </div>
+
+  <!-- ================= Mission Timeline (Process) ================= -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">03 // MISSION TIMELINE</span>
+        <h2 class="heading">From Imagination to <span class="text-gradient">Singularity</span></h2>
+        <p class="description">
+          A vertical glowing timeline charting the flawless 5-phase flight path of your grand celebration.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-center-line"></div>
+
+        <!-- Step 1: Discover -->
+        <div class="timeline-step-row">
+          <div class="timeline-box">
+            <div class="timeline-step-num">01</div>
+            <h3 class="timeline-step-title">Phase I: Discover</h3>
+            <p class="timeline-step-desc">
+              Deep discovery session with ~Mr. Jons. We map your aesthetic desires, guest demography, musical tastes, and grandest inspirations into a definitive creative brief.
+            </p>
+          </div>
+          <div class="timeline-orb-node"></div>
+        </div>
+
+        <!-- Step 2: Design -->
+        <div class="timeline-step-row">
+          <div class="timeline-box">
+            <div class="timeline-step-num">02</div>
+            <h3 class="timeline-step-title">Phase II: 3D Holographic Blueprint</h3>
+            <p class="timeline-step-desc">
+              Walk through your event weeks before it happens. Photorealistic 3D spatial renders of the stage, mandap, lighting heatmaps, and floral architecture.
+            </p>
+          </div>
+          <div class="timeline-orb-node"></div>
+        </div>
+
+        <!-- Step 3: Plan -->
+        <div class="timeline-step-row">
+          <div class="timeline-box">
+            <div class="timeline-step-num">03</div>
+            <h3 class="timeline-step-title">Phase III: Quantum Coordination</h3>
+            <p class="timeline-step-desc">
+              Vendor procurement, acoustic checks, culinary tastings, artist riders, and minute-by-minute run-of-show synchronization across all departments.
+            </p>
+          </div>
+          <div class="timeline-orb-node"></div>
+        </div>
+
+        <!-- Step 4: Execute -->
+        <div class="timeline-step-row">
+          <div class="timeline-box">
+            <div class="timeline-step-num">04</div>
+            <h3 class="timeline-step-title">Phase IV: Flawless Production</h3>
+            <p class="timeline-step-desc">
+              On-site command center management, intelligent DMX light cues, cold pyrotechnic triggers, and dedicated VIP hospitality leads ensuring absolute perfection.
+            </p>
+          </div>
+          <div class="timeline-orb-node"></div>
+        </div>
+
+        <!-- Step 5: Celebrate -->
+        <div class="timeline-step-row">
+          <div class="timeline-box">
+            <div class="timeline-step-num">05</div>
+            <h3 class="timeline-step-title">Phase V: Celebrate & Immortalize</h3>
+            <p class="timeline-step-desc">
+              You experience the magic with your loved ones while our cinematic 4K drones capture indelible lifetime memories.
+            </p>
+          </div>
+          <div class="timeline-orb-node"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Event Designer - "Build Your Event" (WOW FEATURE) ================= -->
+  <section class="designer-section" id="designer">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">04 // BUILD YOUR EVENT</span>
+        <h2 class="heading">Futuristic <span class="text-gradient">Event Designer</span></h2>
+        <p class="description">
+          Configure your dream celebration in real-time. Watch the live simulation update aesthetics, theme lighting, and instant investment estimates.
+        </p>
+      </div>
+
+      <div class="designer-shell">
+        
+        <!-- Controls Card -->
+        <div class="designer-controls-card">
+          
+          <!-- Step 1: Event Type -->
+          <div class="designer-step-block">
+            <div class="step-label-header">
+              <span class="step-badge-num">1</span>
+              <span>Event Category</span>
+            </div>
+            <div class="futuristic-chips-grid">
+              <div class="chip-input-wrap">
+                <input type="radio" name="designerType" id="dtWedding" value="wedding" checked>
+                <label for="dtWedding" class="chip-futuristic-label">
+                  <span class="icon">💍</span>
+                  <span class="name">Wedding</span>
+                </label>
+              </div>
+              <div class="chip-input-wrap">
+                <input type="radio" name="designerType" id="dtParty" value="party">
+                <label for="dtParty" class="chip-futuristic-label">
+                  <span class="icon">🥂</span>
+                  <span class="name">VIP Party</span>
+                </label>
+              </div>
+              <div class="chip-input-wrap">
+                <input type="radio" name="designerType" id="dtCorporate" value="corporate">
+                <label for="dtCorporate" class="chip-futuristic-label">
+                  <span class="icon">🏛</span>
+                  <span class="name">Corporate</span>
+                </label>
+              </div>
+              <div class="chip-input-wrap">
+                <input type="radio" name="designerType" id="dtLaunch" value="launch">
+                <label for="dtLaunch" class="chip-futuristic-label">
+                  <span class="icon">🚀</span>
+                  <span class="name">Launch / Fest</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Guest Slider with Glowing Thumb -->
+          <div class="designer-step-block">
+            <div class="step-label-header">
+              <span class="step-badge-num">2</span>
+              <span>Attendee Scale</span>
+            </div>
+            <div class="guest-slider-box">
+              <div class="slider-readout">
+                <span style="color: var(--text-dim); font-size: 0.9rem;">Estimated Guests:</span>
+                <span class="slider-val-glow" id="sliderValDisplay">300 Guests</span>
+              </div>
+              <input type="range" min="50" max="1500" step="25" value="300" class="glow-slider" id="guestCountSlider" aria-label="Guest Count Slider">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.5rem;">
+                <span>50 (Intimate)</span>
+                <span>500 (Grand)</span>
+                <span>1500+ (Celestial)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Mood & Aesthetic Theme -->
+          <div class="designer-step-block">
+            <div class="step-label-header">
+              <span class="step-badge-num">3</span>
+              <span>Aesthetic Mood / Theme</span>
+            </div>
+            <div class="mood-selector-grid">
+              <div class="mood-card active" data-mood="royal" data-theme-color="#F5C76B" data-bg="linear-gradient(135deg, #1f1708 0%, #3d2c0b 100%)">
+                👑 Royal Gold
+              </div>
+              <div class="mood-card" data-mood="neon" data-theme-color="#22E4FF" data-bg="linear-gradient(135deg, #05192d 0%, #160a2c 100%)">
+                ⚡ Cyber Neon
+              </div>
+              <div class="mood-card" data-mood="minimal" data-theme-color="#EAF0FF" data-bg="linear-gradient(135deg, #131622 0%, #20263c 100%)">
+                💎 Minimal Luxe
+              </div>
+              <div class="mood-card" data-mood="traditional" data-theme-color="#FF4FD8" data-bg="linear-gradient(135deg, #2a0b23 0%, #3e0e1a 100%)">
+                🌸 Traditional Glow
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Enhancements -->
+          <div class="designer-step-block">
+            <div class="step-label-header">
+              <span class="step-badge-num">4</span>
+              <span>Production Enhancements</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <label style="display: flex; align-items: center; gap: 0.65rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;">
+                <input type="checkbox" id="enhDrone" checked style="accent-color: var(--neon-cyan);">
+                <span>4K Cinema & Drones</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.65rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;">
+                <input type="checkbox" id="enhSound" checked style="accent-color: var(--neon-cyan);">
+                <span>Concert Sound & DJ</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.65rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;">
+                <input type="checkbox" id="enhPyro" style="accent-color: var(--neon-cyan);">
+                <span>Cold Pyro & Laser SFX</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.65rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;">
+                <input type="checkbox" id="enhValet" style="accent-color: var(--neon-cyan);">
+                <span>VIP Valet & Protocol</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Live Simulation Preview Card -->
+        <aside class="designer-preview-card" id="designerPreviewBox">
+          <div class="preview-theme-banner" id="previewThemeBanner" style="background: linear-gradient(135deg, #1f1708 0%, #3d2c0b 100%);">
+            <span id="previewThemeLabel">ROYAL GOLD SPECTACLE</span>
+          </div>
+
+          <h3 class="font-heading" style="font-size: 1.3rem; margin-bottom: 0.25rem;" id="simEventName">Royal Wedding Celebration</h3>
+          <p style="color: var(--text-dim); font-size: 0.82rem; margin-bottom: 1.25rem;" id="simEventSub">Curated for 300 guests with Royal Gold Theme</p>
+
+          <ul class="summary-rows-list">
+            <li class="summary-row">
+              <span class="label">Direction & Management:</span>
+              <span class="val" id="rowDirVal">₹1,50,000</span>
+            </li>
+            <li class="summary-row">
+              <span class="label">Spatial Scenography:</span>
+              <span class="val" id="rowScenoVal">₹4,50,000</span>
+            </li>
+            <li class="summary-row">
+              <span class="label">Audio-Visual & Light Grid:</span>
+              <span class="val" id="rowAvVal">₹1,80,000</span>
+            </li>
+            <li class="summary-row">
+              <span class="label">Enhancement Modules:</span>
+              <span class="val" id="rowEnhVal">₹2,15,000</span>
+            </li>
+          </ul>
+
+          <div class="preview-total-box">
+            <div class="total-title-tag">Simulated Investment</div>
+            <div class="total-price-large" id="simulatedTotalPrice">₹9,95,000</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.35rem;">Transparent quote in INR • No hidden surcharges</div>
+          </div>
+
+          <button type="button" class="btn btn-solid-glow" id="transferToContactBtn" style="width: 100%; margin-bottom: 0.85rem;">
+            <span>📋</span> Lock Blueprint & Initiate Contact
+          </button>
+          
+          <button type="button" class="btn btn-whatsapp" id="designerWhatsAppBtn" style="width: 100%;">
+            <span>💬</span> Dispatch via WhatsApp
+          </button>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Portfolio - "Event Archive" ================= -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">05 // EVENT ARCHIVE</span>
+        <h2 class="heading">Chronicles of <span class="text-gradient">Perfection</span></h2>
+        <p class="description">
+          A holographic showcase of past milestones engineered across palaces, mega-arenas, and luxury estates.
+        </p>
+      </div>
+
+      <!-- Category Filter Chips -->
+      <div class="portfolio-filter-row">
+        <button class="filter-chip active" data-filter="all">All Chronicles</button>
+        <button class="filter-chip" data-filter="wedding">Weddings</button>
+        <button class="filter-chip" data-filter="party">VIP Parties</button>
+        <button class="filter-chip" data-filter="corporate">Corporate</button>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="bento-archive-grid" id="portfolioArchiveGrid">
+        
+        <div class="bento-card" data-cat="wedding" data-title="Celestial Lake Palace Mandap" data-venue="Taj Lake Palace, Udaipur" data-guests="650 Guests" data-img="assets/images/wedding.jpg">
+          <img src="assets/images/wedding.jpg" alt="Royal Wedding Mandap and Floral Decor" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">Royal Wedding</span>
+            <h3 class="bento-title">Celestial Lake Palace Mandap</h3>
+            <div class="bento-meta">
+              <span>📍 Udaipur</span>
+              <span>👥 650 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card" data-cat="corporate" data-title="Global Tech Symposium Gala" data-venue="Grand Hyatt Ballroom" data-guests="1,200 Attendees" data-img="assets/images/corporate.jpg">
+          <img src="assets/images/corporate.jpg" alt="Corporate Gala Keynote Stage" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">Corporate Gala</span>
+            <h3 class="bento-title">Global Tech Symposium Gala</h3>
+            <div class="bento-meta">
+              <span>📍 Grand Hyatt</span>
+              <span>👥 1,200 Attendees</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card" data-cat="party" data-title="Midnight Golden Soirée" data-venue="Skyline Rooftop Lounge" data-guests="180 Guests" data-img="assets/images/party.jpg">
+          <img src="assets/images/party.jpg" alt="VIP Birthday Party and Lounge" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">VIP Party</span>
+            <h3 class="bento-title">Midnight Golden Soirée</h3>
+            <div class="bento-meta">
+              <span>📍 Skyline Lounge</span>
+              <span>👥 180 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card" data-cat="wedding" data-title="Imperial Glasshouse Banquet" data-venue="The Leela Palace" data-guests="400 Guests" data-img="assets/images/dining.jpg">
+          <img src="assets/images/dining.jpg" alt="Fine Dining Banquet Table Setup" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">Fine Dining</span>
+            <h3 class="bento-title">Imperial Glasshouse Banquet</h3>
+            <div class="bento-meta">
+              <span>📍 The Leela Palace</span>
+              <span>👥 400 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card" data-cat="wedding" data-title="Grand Chandelier Ballroom" data-venue="Fairmont Palace" data-guests="800 Guests" data-img="assets/images/hero.jpg">
+          <img src="assets/images/hero.jpg" alt="Grand Ballroom Chandelier Celebration" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">Grand Reception</span>
+            <h3 class="bento-title">Grand Chandelier Ballroom</h3>
+            <div class="bento-meta">
+              <span>📍 Fairmont Palace</span>
+              <span>👥 800 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card" data-cat="corporate" data-title="Annual Leadership Honors" data-venue="JW Marriott" data-guests="900 Guests" data-img="assets/images/corporate.jpg">
+          <img src="assets/images/corporate.jpg" alt="Corporate Honors Night" loading="lazy">
+          <div class="bento-card-overlay">
+            <span class="bento-tag">Awards Summit</span>
+            <h3 class="bento-title">Annual Leadership Honors</h3>
+            <div class="bento-meta">
+              <span>📍 JW Marriott</span>
+              <span>👥 900 Guests</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="archiveLightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-box">
+      <button class="service-modal-close" id="lightboxCloseBtn" aria-label="Close Lightbox">✕</button>
+      <div class="lightbox-img-wrapper">
+        <img src="" id="lightboxActiveImg" alt="Enlarged Archive Image">
+      </div>
+      <div class="lightbox-details">
+        <span class="hud-badge" id="lightboxTag">CATEGORY</span>
+        <h3 class="font-heading" style="margin: 0.6rem 0 0.35rem 0; font-size: 1.6rem;" id="lightboxHeadline">Project Title</h3>
+        <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1.25rem;" id="lightboxInfo">Location • Guest count</p>
+        <a href="#designer" class="btn btn-solid-glow" id="lightboxPlanSimilarBtn">Design Similar Experience →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Packages - "Select Your Tier" ================= -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">06 // SELECT YOUR TIER</span>
+        <h2 class="heading">Transparent <span class="text-gradient">Production Tiers</span></h2>
+        <p class="description">
+          Engineered for total pricing transparency. Every tier includes dedicated leadership from ~Mr. Jons and our master production crew.
+        </p>
+      </div>
+
+      <div class="packages-3d-grid" id="packagesGrid">
+        <!-- Rendered dynamically by app.js from siteConfig.packages -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Testimonials - "Transmissions" ================= -->
+  <section class="transmissions-section" id="transmissions">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">07 // TRANSMISSIONS</span>
+        <h2 class="heading">Echoes of <span class="text-gradient font-romance">Pure Delight</span></h2>
+        <p class="description">
+          Verified holographic transmissions from distinguished hosts and executive directors.
+        </p>
+      </div>
+
+      <div class="transmissions-carousel-track">
+        
+        <div class="transmission-card">
+          <div>
+            <div class="holo-stars">★★★★★</div>
+            <p class="transmission-quote">
+              "~Mr. Jons and the Kairos crew engineered a Udaipur palace wedding that felt straight out of a royal dreamscape. The floral architecture and laser entry were spellbinding."
+            </p>
+          </div>
+          <div class="transmission-sender">
+            <div class="transmission-avatar">AS</div>
+            <div>
+              <div style="font-weight: 700; color: #fff;">Aarav & Simran Singhania</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim);">Destination Wedding, Udaipur</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transmission-card">
+          <div>
+            <div class="holo-stars">★★★★★</div>
+            <p class="transmission-quote">
+              "Executing our Global Tech Summit for 1,200 international executives requires military-grade timing and breathtaking AV. Kairos delivered with flawless precision."
+            </p>
+          </div>
+          <div class="transmission-sender">
+            <div class="transmission-avatar">VK</div>
+            <div>
+              <div style="font-weight: 700; color: #fff;">Vikramaditya Kapoor</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim);">VP of Operations, NexaTech Global</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transmission-card">
+          <div>
+            <div class="holo-stars">★★★★★</div>
+            <p class="transmission-quote">
+              "My 30th milestone birthday soirée was unforgettable. Custom neon bar, champagne pyramid, and sound acoustics that kept the dance floor packed until 4 AM!"
+            </p>
+          </div>
+          <div class="transmission-sender">
+            <div class="transmission-avatar">NM</div>
+            <div>
+              <div style="font-weight: 700; color: #fff;">Nisha Merchant</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim);">VIP Rooftop Soirée, Mumbai</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Interactive FAQ ================= -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">08 // FAQ PROTOCOLS</span>
+        <h2 class="heading">Frequently Addressed <span class="text-gradient">Questions</span></h2>
+        <p class="description">Everything you need to understand regarding engagement, travel, and production timelines.</p>
+      </div>
+
+      <div class="faq-accordion-box">
+        
+        <div class="faq-holo-item active">
+          <button class="faq-holo-trigger">
+            <span>How far in advance should we secure Kairos for an event?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-holo-body">
+            <p>For royal weddings and multi-day destination galas, we recommend engaging 4 to 8 months in advance to lock optimal dates and top-tier venues. However, our rapid response production division routinely executes high-profile corporate galas and private parties within 2 to 4 weeks' notice.</p>
+          </div>
+        </div>
+
+        <div class="faq-holo-item">
+          <button class="faq-holo-trigger">
+            <span>Do ~Mr. Jons and the team execute destination events globally?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-holo-body">
+            <p>Yes. While our headquarters are in Mumbai and Delhi, our event directors travel globally. We regularly execute celebrations across Udaipur, Jaipur, Goa, Kerala, Dubai, Bali, and Europe with a dedicated traveling technical crew.</p>
+          </div>
+        </div>
+
+        <div class="faq-holo-item">
+          <button class="faq-holo-trigger">
+            <span>Can we customize the production tiers or select our own caterer?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-holo-body">
+            <p>All packages are completely modular. If you have a preferred venue or culinary partner, we seamlessly integrate into their facilities, elevating the stage scenography, lighting, guest hospitality, and audio-visual engineering.</p>
+          </div>
+        </div>
+
+        <div class="faq-holo-item">
+          <button class="faq-holo-trigger">
+            <span>How does the 3D spatial simulation phase work?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-holo-body">
+            <p>Before physical fabrication begins, our design team builds a 3D digital twin of your venue. You will inspect photorealistic renders of your mandap, stage trusses, table layouts, and lighting dynamics, ensuring 100% aesthetic alignment.</p>
+          </div>
+        </div>
+
+        <div class="faq-holo-item">
+          <button class="faq-holo-trigger">
+            <span>What is your commercial payment schedule?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-holo-body">
+            <p>We operate on a transparent 3-stage milestone structure: 30% upon signing to secure dates and team deployment; 50% staged across vendor bookings and 3D approvals; and the remaining 20% prior to on-site production commencement.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Contact - "Initiate Contact" ================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-terminal-box">
+        
+        <!-- Sidebar Meta -->
+        <div class="contact-meta-sidebar">
+          <div>
+            <div class="online-pulse-pill">
+              <span class="dot"></span>
+              <span>COMMUNICATION ARRAY ONLINE</span>
+            </div>
+
+            <h3 class="font-heading" style="font-size: 1.85rem; margin-bottom: 0.75rem;">Initiate <span class="text-gradient">Contact</span></h3>
+            <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.7;">
+              Connect directly with ~Mr. Jons and our Senior Event Architects. We provide a complimentary discovery briefing and 3D concept moodboard within 24 hours.
+            </p>
+
+            <ul class="contact-meta-list">
+              <li class="contact-meta-item">
+                <span class="icon-circle">📍</span>
+                <div>
+                  <strong style="color: #fff;">Headquarters:</strong>
+                  <div style="color: var(--text-dim); font-size: 0.85rem;">Kairos Sky Horizon, Level 42, BKC Mumbai & Aerocity Delhi</div>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <span class="icon-circle">📞</span>
+                <div>
+                  <strong style="color: #fff;">Direct Line:</strong>
+                  <div style="color: var(--text-dim); font-size: 0.85rem;">+91 98765 43210 / +91 91234 56789</div>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <span class="icon-circle">✉</span>
+                <div>
+                  <strong style="color: #fff;">Encrypted Transmission:</strong>
+                  <div style="color: var(--text-dim); font-size: 0.85rem;">hello@kairosevents.com</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1.1rem; background: rgba(34, 228, 255, 0.06); border: 1px solid rgba(34, 228, 255, 0.25); border-radius: var(--radius-sm);">
+            <div style="color: var(--neon-cyan); font-weight: 700; font-size: 0.82rem;">⚡ WhatsApp Instant Dispatch:</div>
+            <div style="color: var(--text-dim); font-size: 0.8rem; margin-top: 0.25rem;">
+              Click "Dispatch via WhatsApp" for priority routing directly to our event director.
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Interactive -->
+        <div class="contact-interactive-form">
+          <form id="kairosContactForm">
+            
+            <div class="holo-form-row">
+              <div class="holo-field">
+                <label for="inputName">Full Name *</label>
+                <input type="text" id="inputName" placeholder="e.g. Aryan Malhotra" required>
+              </div>
+              <div class="holo-field">
+                <label for="inputPhone">Phone / WhatsApp *</label>
+                <input type="tel" id="inputPhone" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="holo-form-row">
+              <div class="holo-field">
+                <label for="inputEmail">Email Address *</label>
+                <input type="email" id="inputEmail" placeholder="aryan@example.com" required>
+              </div>
+              <div class="holo-field">
+                <label for="inputDate">Target Date *</label>
+                <input type="date" id="inputDate" required>
+              </div>
+            </div>
+
+            <div class="holo-form-row">
+              <div class="holo-field">
+                <label for="selectEventType">Event Type *</label>
+                <select id="selectEventType" required>
+                  <option value="Royal & Futuristic Wedding">Royal & Futuristic Wedding</option>
+                  <option value="VIP & Milestone Birthday Party">VIP & Milestone Birthday Party</option>
+                  <option value="Corporate Summit & Gala">Corporate Summit & Gala</option>
+                  <option value="Product Launch & Reveal">Product Launch & Reveal</option>
+                  <option value="College Mega Fest">College Mega Fest</option>
+                  <option value="Custom Experiential Soirée">Custom Experiential Soirée</option>
+                </select>
+              </div>
+              <div class="holo-field">
+                <label for="inputGuests">Attendee Scale</label>
+                <input type="text" id="inputGuests" placeholder="e.g. 300 Guests">
+              </div>
+            </div>
+
+            <div class="holo-field full">
+              <label for="inputNotes">Creative Vision & Specific Aspirations</label>
+              <textarea id="inputNotes" placeholder="Describe the themes, aesthetic preferences, venue ideas, or special entry reveals you envision..."></textarea>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button type="submit" class="btn btn-solid-glow" id="formSubmitBtn">
+                <span>✦</span> Transmit VIP Inquiry
+              </button>
+              <button type="button" class="btn btn-whatsapp" id="formWhatsAppBtn">
+                <span>💬</span> Dispatch via WhatsApp
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer & Oversized Wordmark ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Oversized Reactive Brand Wordmark -->
+      <div class="footer-oversized-wordmark" id="footerWordmark">KAIROS</div>
+
+      <div class="footer-grid-layout">
+        
+        <!-- Brand Info -->
+        <div>
+          <div class="brand-wrap" style="margin-bottom: 1rem;">
+            <div class="brand-emblem-box">
+              <img src="assets/images/kairos-circle-badge.png" alt="Kairos Events Logo">
+            </div>
+            <div class="brand-titles">
+              <span class="brand-main-name">KAIROS</span>
+              <span class="brand-sub-badge">~MR. JONS • HOSPITALITY</span>
+            </div>
+          </div>
+          <p class="footer-brand-p">
+            Crafting Life's Perfect Moments through cutting-edge 3D spatial scenography, royal hospitality, and unforgettable energy.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">▶</a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Navigation Col 1 -->
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1.25rem; color: #fff;">EXPERIENCES</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+            <li><a href="#services" style="color: var(--text-dim); text-decoration: none;">Royal Weddings</a></li>
+            <li><a href="#services" style="color: var(--text-dim); text-decoration: none;">VIP Parties</a></li>
+            <li><a href="#services" style="color: var(--text-dim); text-decoration: none;">Corporate Galas</a></li>
+            <li><a href="#services" style="color: var(--text-dim); text-decoration: none;">Product Reveals</a></li>
+            <li><a href="#services" style="color: var(--text-dim); text-decoration: none;">College Fests</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigation Col 2 -->
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1.25rem; color: #fff;">QUICK ACCESS</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+            <li><a href="#about" style="color: var(--text-dim); text-decoration: none;">About ~Mr. Jons</a></li>
+            <li><a href="#timeline" style="color: var(--text-dim); text-decoration: none;">Mission Timeline</a></li>
+            <li><a href="#designer" style="color: var(--text-dim); text-decoration: none;">Build Your Event</a></li>
+            <li><a href="#portfolio" style="color: var(--text-dim); text-decoration: none;">Event Archive</a></li>
+            <li><a href="#packages" style="color: var(--text-dim); text-decoration: none;">Production Tiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Trend Report -->
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1.25rem; color: #fff;">2060 TREND REPORT</h4>
+          <p style="color: var(--text-dim); font-size: 0.88rem; margin-bottom: 1rem;">
+            Subscribe to receive our annual Wedding & Gala Scenography Trend Guide.
+          </p>
+          <form onsubmit="event.preventDefault(); alert('Transmission confirmed! The Kairos Trend Guide has been dispatched to your inbox.');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your executive email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-full); padding: 0.65rem 1.1rem; color: #fff; font-size: 0.85rem; width: 100%; outline: none;">
+            <button type="submit" class="btn btn-solid-glow" style="padding: 0.65rem 1.3rem;">Get</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: var(--text-dim); flex-wrap: wrap; gap: 1rem;">
+        <div>© 2026 KAIROS EVENTS & HOSPITALITY (~MR. JONS). All Rights Reserved.</div>
+        <div>Crafting Life's Perfect Moments // Engineered for the Future</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= Floating WhatsApp Glowing Orb ================= -->
+  <div class="floating-whatsapp-wrap">
+    <div class="whatsapp-orb-tooltip">Talk to our planner ⚡</div>
+    <a href="https://wa.me/919876543210?text=Hi%20Kairos%20Team!%20I%20am%20interested%20in%20planning%20an%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-glowing-orb" title="Talk to our planner" aria-label="Talk to our planner">
+      💬
+    </a>
+  </div>
+
+  <!-- Video Showreel Modal -->
+  <div class="lightbox-modal" id="showreelModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-box" style="background: #000; text-align: center;">
+      <button class="service-modal-close" id="showreelCloseBtn" aria-label="Close Showreel">✕</button>
+      <div style="padding: 3rem 2rem;">
+        <span class="hud-badge" style="margin-bottom: 1rem;">CINEMATIC SHOWREEL // 4K</span>
+        <h3 class="font-heading" style="font-size: 1.8rem; margin-bottom: 1.5rem;">KAIROS EXPERIENCE 2026</h3>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); border: 1px solid var(--neon-cyan);">
+          <img src="assets/images/hero.jpg" alt="Showreel Preview" style="position: absolute; top:0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; inset: 0; background: rgba(5,7,15,0.4); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--grad-future-glow); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #000; box-shadow: var(--glow-cyan-lg);">▶</div>
+            <div style="margin-top: 1rem; color: #fff; font-family: var(--font-heading); font-size: 0.9rem; letter-spacing: 0.15em;">SIMULATED CINEMATIC REEL</div>
+          </div>
+        </div>
+        <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 1.5rem;">
+          Featuring grand royal celebrations from Udaipur, Mumbai galas, and cyber-neon rooftop concerts.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="siteConfig.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
