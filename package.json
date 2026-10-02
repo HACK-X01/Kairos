@@ -1,0 +1,19 @@
+{
+  "name": "kairos-events",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KAIROS Events & Hospitality Official Website (~Mr. Jons)",
+  "main": "server.js",
+  "scripts": {
+    "build": "echo 'Build successful'",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "kairos",
+    "event-planner",
+    "hospitality",
+    "luxury-weddings"
+  ],
+  "author": "Kairos Events & Hospitality",
+  "license": "ISC"
+}
